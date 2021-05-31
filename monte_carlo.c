@@ -52,9 +52,9 @@ float mc_pi(int i)
         y = frandom();
 
         dist = ((float)(pow(x,2)) + (float)(pow(y,2)));
-        distance = (float)(sqrt(dist));
+        distance = sqrt(dist);
 
-        if(distance < 1.000000)
+        if(distance < 1)
         {
             count++;
         }
