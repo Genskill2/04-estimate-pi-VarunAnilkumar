@@ -39,5 +39,29 @@ int main(void) {
   }
 }
 
+float mc_pi(int i)
+{
+    int j,count;
+    float x,y,pi;
+    float distance,dist;
 
+    for(j=1;j<=i;j++)
+    {
+        // call the frandom function twice for each iteration to find a point (x,y)
+        x = frandom();
+        y = frandom();
+
+        dist = ((float)(pow(x,2)) + (float)(pow(y,2)));
+        distance = (float)(sqrt(dist));
+
+        if(distance < 1.000000)
+        {
+            count++;
+        }
+    }
+
+    pi = 4 * ((float)(count)/(float)(i));
+
+    return pi;
+}
 
