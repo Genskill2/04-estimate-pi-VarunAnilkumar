@@ -41,7 +41,7 @@ int main(void) {
 
 float mc_pi(int i)
 {
-    int j,count;
+    int j,count=0;
     float x,y,pi;
     float distance,dist;
 
@@ -51,10 +51,10 @@ float mc_pi(int i)
         x = frandom();
         y = frandom();
 
-        dist = ((float)(pow(x,2)) + (float)(pow(y,2)));
-        distance = sqrt(dist);
+        dist = (float)(pow(x,2)) + (float)(pow(y,2));
+        distance = (float)(sqrt(dist));
 
-        if(distance < 1)
+        if(distance < 1.000000)
         {
             count++;
         }
@@ -64,4 +64,3 @@ float mc_pi(int i)
 
     return pi;
 }
-
