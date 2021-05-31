@@ -30,9 +30,9 @@ float wallis_pi(int i)
     float pi;
     float half_of_pi = 1;
 
-    for(j=1;j<=i;j++)
+    for(j=1;j<=i;j++) // iteration starts from 1 to n
     {
-        half_of_pi = half_of_pi * ((4 * i^2)/((4 * i^2) - 1));
+        half_of_pi = half_of_pi * (float)( 4 * pow(j,2) )/(float)( ( 4 * pow(j,2) ) - 1);
     }
 
     pi = 2 * half_of_pi;
